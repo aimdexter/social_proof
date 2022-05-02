@@ -5,7 +5,7 @@ $Dark_Grayish_Magenta: hsl(303, 10%, 53%);
 $Light_Grayish_Magenta: hsl(300, 24%, 96%);
 $White: hsl(0, 0%, 100%);
 $spartan : 'League Spartan', sans-serif;
-body{
+html,body{
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -119,5 +119,22 @@ main{
     text-align: center;
     a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+        width: 1024px;
+    }
+    .header{
+        text-align: left;
+    }
+    .top{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .testimonials{
+
     }
 }

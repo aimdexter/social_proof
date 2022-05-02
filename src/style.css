@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -183,5 +183,23 @@ main {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+  .header {
+    text-align: left;
+  }
+  .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=style.css.map */
