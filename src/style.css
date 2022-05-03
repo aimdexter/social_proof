@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
-  background-color: red;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,6 +17,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url("./images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-y: center;
 }
 
 main {
@@ -35,10 +38,16 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  background-color: yellow;
   padding: 0;
   margin: 0;
   width: 100%;
+  background-image: url("./images/bg-pattern-top-mobile.svg");
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+main .top {
+  padding-top: 2rem;
 }
 
 main .top .header {
@@ -56,7 +65,7 @@ main .top .header {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  width: 300px;
+  width: 332px;
 }
 
 main .top .header .title {
@@ -163,6 +172,9 @@ main .top .rating_cards .stars .fa-star {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 2rem;
   width: 300px;
 }
@@ -234,13 +246,22 @@ main .top .rating_cards .stars .fa-star {
 }
 
 @media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("./images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-y: bottom;
+    background-position-x: center;
+  }
   main {
     height: 100vh;
-    width: 80vw;
+    width: 1024px;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: 40%;
+    background-image: url("./images/bg-pattern-top-desktop.svg");
   }
   main .top {
-    -ms-flex-item-align: stretch;
-        align-self: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -248,10 +269,45 @@ main .top .rating_cards .stars .fa-star {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-width: 819px;
+    width: 1024px;
+  }
+  main .top .header {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  main .top .header .title {
+    font-size: 50px;
+  }
+  main .top .header p {
+    font-size: 16px;
+  }
+  main .top .rating_cards {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    gap: 0.5rem;
+    padding-left: 11rem;
+  }
+  main .top .rating_cards .rating {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 350px;
+  }
+  main .top .rating_cards .rating1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  main .top .rating_cards .rating2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main .top .rating_cards .rating3 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
   main .top .title {
     text-align: left;

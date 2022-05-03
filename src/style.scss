@@ -15,22 +15,28 @@ body{
     margin: 0;
     padding: 0;
     font-family: $spartan;
-    background-color: red;
     width: 100vw;
     @include flex;
+    background-image: url('./images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-y: center
 }
 main{
     @include flex;
     gap: 1rem;
-    background-color: yellow;
     padding: 0;
     margin: 0;
     width: 100%;
+    background-image: url('./images/bg-pattern-top-mobile.svg');
+    background-position-x: center;
+    background-repeat: no-repeat;
 .top{
+    padding-top: 2rem;
     .header{
         @include flex;
         text-align: center;
-        width: 300px;
+        width: 332px;
         
         .title{
             color: $dark_magenta;
@@ -83,6 +89,7 @@ main{
     border-radius: 0.5rem;
     padding: 1rem;
     @include flex;
+    align-items: flex-start;
     gap: 2rem;
     width: 300px;
         .profil{
@@ -129,15 +136,51 @@ main{
 }
 
 @media only screen and (min-width: 1024px) {
+  body{
+    background-image: url('./images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position-y: bottom;
+    background-position-x: center;
+  }
   main{
       height: 100vh;
-      width: 80vw;
+      width: 1024px;
+      background-repeat: no-repeat;
+      background-position-x: left;
+      background-size: 40%;
+      background-image: url('./images/bg-pattern-top-desktop.svg');
       .top{
-        align-self: stretch;
          display: flex;
          flex-direction: row;
-         justify-content: space-between;
-         max-width: 819px;
+         width: 1024px;
+         .header{
+             flex: 2;
+             .title{
+                 font-size: 50px;
+             }
+             p{
+                 font-size: 16px;
+             }
+         }
+         .rating_cards{
+             flex: 3;
+             gap: 0.5rem;
+             padding-left: 11rem;
+            .rating{
+                flex-direction: row;
+                width: 350px;
+            }
+            .rating1{
+                align-self: flex-start;
+            }
+            .rating2{
+                align-self: center;
+            }
+            .rating3{
+                align-self: flex-end;
+            }
+         }
          .title{
              text-align: left;
          }
