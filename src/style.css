@@ -1,10 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
-html, body {
+body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
   font-family: "League Spartan", sans-serif;
+  background-color: red;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main {
@@ -21,36 +34,14 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2rem;
   gap: 1rem;
+  background-color: yellow;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  width: 300px;
-}
-
-.header .title {
-  color: #502050;
-  font-weight: 700;
-  font-size: 35px;
-}
-
-.header p {
-  font-size: 17px;
-  color: #937b92;
-  font-weight: 500;
-  line-height: 1.25em;
-}
-
-.rating_cards {
+main .top .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,10 +52,44 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 300px;
+}
+
+main .top .header .title {
+  color: #502050;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+main .top .header p {
+  font-size: 17px;
+  color: #937b92;
+  font-weight: 500;
+  line-height: 1.25em;
+}
+
+main .top .rating_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1rem;
 }
 
-.rating_cards .rating {
+main .top .rating_cards .rating {
   background-color: #eee2ed;
   color: #502050;
   min-width: 300px;
@@ -82,21 +107,26 @@ main {
   font-weight: 700;
 }
 
-.rating_cards .stars {
+main .top .rating_cards .stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 0.5em;
 }
 
-.rating_cards .stars .fa-star {
+main .top .rating_cards .stars .fa-star {
   color: gold;
+}
+
+.fa-circle {
+  color: white;
+  font-size: 15px;
 }
 
 .testimonials {
@@ -107,6 +137,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1rem;
 }
 
@@ -121,6 +157,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 2rem;
   width: 300px;
 }
@@ -153,6 +195,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 0.4rem;
 }
 
@@ -186,13 +234,13 @@ main {
 }
 
 @media only screen and (min-width: 1024px) {
-  body {
-    width: 1024px;
+  main {
+    height: 100vh;
+    width: 80vw;
   }
-  .header {
-    text-align: left;
-  }
-  .top {
+  main .top {
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -200,6 +248,47 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 819px;
+  }
+  main .top .title {
+    text-align: left;
+  }
+  main .top p {
+    text-align: left;
+  }
+  main .top .rating_cards {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main .testimonials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    height: 290px;
+  }
+  main .testimonials .testimonial_card {
+    height: 218px;
+  }
+  main .testimonials .card1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  main .testimonials .card2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main .testimonials .card3 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */
